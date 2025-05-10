@@ -30,6 +30,7 @@ export interface GifContextType {
   setFilter: React.Dispatch<React.SetStateAction<FilterType>>;
   favorites: GifData[];
   setFavorites: React.Dispatch<React.SetStateAction<GifData[]>>;
+  addToFavorites: (id: string) => void;
 }
 
 // Empty context default value
@@ -41,4 +42,5 @@ export const defaultGifContextValue: GifContextType = {
   setFilter: () => {},
   favorites: [],
   setFavorites: () => {},
+  addToFavorites: () => {},
 };

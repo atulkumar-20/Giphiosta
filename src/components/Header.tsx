@@ -18,7 +18,7 @@ export const Header = () => {
   };
 
   useEffect(() => {
-    console.log('GiphyFetch object:', gf);
+    // console.log('GiphyFetch object:', gf);
     fetchGifCategories();
   }, []);
 
