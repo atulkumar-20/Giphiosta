@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { HiEllipsisVertical, HiMiniBars3BottomRight } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 import { GifState } from '../context/GifContext';
+import { GifSearch } from './GifSearch';
 
 export const Header = () => {
   const [categories, setCategories] = useState<
@@ -9,7 +10,7 @@ export const Header = () => {
   >([]);
   const [showCategories, setShowCategories] = useState(false);
 
-  const { gf, filter, setFilter, favorites } = GifState();
+  const { gf, favorites } = GifState();
 
   const fetchGifCategories = async () => {
     const { data } = await gf.categories();
@@ -87,6 +88,7 @@ export const Header = () => {
           )}
         </div>
         {/* Search */}
+        <GifSearch/>
       </nav>
     </>
   );
