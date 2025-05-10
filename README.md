@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+# Giphiosta - A GIPHY Browsing Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Giphiosta is a modern web application for browsing, searching, and saving your favorite GIFs from GIPHY. Built with React, TypeScript, and Vite, it offers a responsive and intuitive interface for all your GIF needs.
 
-Currently, two official plugins are available:
+Live : https://giphiosta.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Browse trending GIFs and stickers
+- Search for GIFs by keywords
+- View GIFs by categories
+- Save your favorite GIFs
+- View detailed information about each GIF
+- Responsive design for mobile and desktop
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React 19** - Latest version of the popular UI library
+- **TypeScript** - For type safety and better developer experience
+- **Vite** - Fast, modern frontend build tool
+- **React Router** - For navigation and routing
+- **Tailwind CSS** - For styling and responsive design
+- **GIPHY API** - For fetching GIFs and related data
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- pnpm (v8 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/atulkumar-20/giphiosta.git
+   cd giphiosta
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Create a `.env` file in the root directory and add your GIPHY API key:
+   ```
+   VITE_GIPHY_API_KEY=your_giphy_api_key
+   ```
+
+4. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173`
+
+## Building for Production
+
+To create a production build:
+
+```bash
+pnpm build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To preview the production build locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm preview
 ```
+
+## Project Structure
+
+```
+giphiosta/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── context/        # React context providers
+│   ├── layouts/        # Layout components
+│   ├── pages/          # Page components
+│   ├── types/          # TypeScript type definitions
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Application entry point
+├── .env                # Environment variables (not in repo)
+├── index.html          # HTML entry point
+├── package.json        # Project dependencies and scripts
+├── tsconfig.json       # TypeScript configuration
+└── vite.config.ts      # Vite configuration
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [GIPHY](https://giphy.com/) for providing the API
+- [React Icons](https://react-icons.github.io/react-icons/) for the icon set
+- All the open-source libraries that made this project possible
